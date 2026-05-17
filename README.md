@@ -108,7 +108,7 @@ To get the cover and screenshot to appear in EmulationStation, add this entry to
 
 ### Goldberg Steam Emulator
 
-The files `risingdusk/steam_api.dll` and `risingdusk/steam_api64.dll` included in this port are **not** Valve's Steam client libraries. They are part of the [Goldberg Steam Emulator](https://gitlab.com/Mr_Goldberg/goldberg_steam_emu) by Mr_Goldberg, a clean-room reimplementation of the Steam API released under the **MIT licence** (see `risingdusk/licenses/goldberg.txt`).
+The files `risingdusk/steam_api.dll` and `risingdusk/steam_api64.dll` included in this port are **not** Valve's Steam client libraries. They are part of the [Goldberg Steam Emulator](https://gitlab.com/Mr_Goldberg/goldberg_emulator/blob/master/README.md)  by Mr_Goldberg, a clean-room reimplementation of the Steam API released under the **MIT licence** (see `risingdusk/licenses/goldberg.txt`).
 
 These files replace the original `steam_api.dll` so the game can initialise without Steam running on the device. The user must still own and purchase the game on Steam — without the original game files this port does nothing.
 
