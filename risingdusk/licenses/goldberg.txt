@@ -25,6 +25,9 @@ SOFTWARE.
 Goldberg Steam Emulator
 https://gitlab.com/Mr_Goldberg/goldberg_steam_emu
 
-This port bundles steam_api.dll and steam_api64.dll from the Goldberg Steam
-Emulator to allow the game to run without Steam. These files are used in place
-of the original Steam API DLLs.
+The files steam_api.dll and steam_api64.dll bundled in this port are from the
+Goldberg Steam Emulator. They are NOT Valve's Steam client libraries — they are
+a clean-room reimplementation of the Steam API. They are included so the game
+can initialise on a device where Steam is not installed. The original game files
+(Rising Dusk.exe, assets/, etc.) are not included and must be obtained by
+purchasing the game on Steam.

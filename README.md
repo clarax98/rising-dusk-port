@@ -65,6 +65,25 @@ Open PortMaster or EmulationStation → Ports → Rising Dusk.
 
 On first launch Wine sets up its prefix (~30 seconds). Subsequent launches are immediate.
 
+### 4. Artwork (optional)
+
+To get the cover and screenshot to appear in EmulationStation, add this entry to `/roms/ports/gamelist.xml` inside the `<gameList>` block:
+
+```xml
+<game>
+  <path>./RisingDusk.sh</path>
+  <name>Rising Dusk</name>
+  <desc>An Anti-Coin Collection Platformer inspired by Japanese folktales. Befriend an assortment of ghosts and ghouls as you explore the world hidden in the dusk.</desc>
+  <image>./risingdusk/cover.png</image>
+  <thumbnail>./risingdusk/screenshot.png</thumbnail>
+  <developer>Studio Stobie</developer>
+  <publisher>Studio Stobie</publisher>
+  <releasedate>20180726T000000</releasedate>
+  <genre>Indie, Platformer</genre>
+  <players>1</players>
+</game>
+```
+
 ---
 
 ## Controls
@@ -82,6 +101,16 @@ On first launch Wine sets up its prefix (~30 seconds). Subsequent launches are i
 
 - On some ROCKNIX builds the game must be launched from a terminal rather than EmulationStation. Run `/roms/ports/RisingDusk.sh` directly if the menu entry does not work.
 - Faint audio artefacts may be audible at very low volume due to the Wine/Box64 audio pipeline.
+
+---
+
+## Third-party components
+
+### Goldberg Steam Emulator
+
+The files `risingdusk/steam_api.dll` and `risingdusk/steam_api64.dll` included in this port are **not** Valve's Steam client libraries. They are part of the [Goldberg Steam Emulator](https://gitlab.com/Mr_Goldberg/goldberg_steam_emu) by Mr_Goldberg, a clean-room reimplementation of the Steam API released under the **MIT licence** (see `risingdusk/licenses/goldberg.txt`).
+
+These files replace the original `steam_api.dll` so the game can initialise without Steam running on the device. The user must still own and purchase the game on Steam — without the original game files this port does nothing.
 
 ---
 
